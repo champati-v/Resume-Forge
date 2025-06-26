@@ -6,7 +6,7 @@
 - Save and download resumes as JSON
 - Built with **React.js + Tailwind CSS + FastAPI**
 
-![ResumeForge Screenshot](./preview.png)
+![image](https://github.com/user-attachments/assets/5ef2b1c3-4f2d-4c6d-83c3-cd11f9120e2e)
 
 ---
 
@@ -49,8 +49,8 @@ cd frontend
 npm install
 npm run dev
 
-
 Open another terminal
+
 cd backend 
 python -m venv venv
 venv\Scripts\activate  (for windows)
