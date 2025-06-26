@@ -1,0 +1,28 @@
+{
+  "fullName": "John Doe",
+  "summary": "\ud83d\udd0d Enhanced: Experienced software developer with 5+ years in full-stack development. passionate about creating scalable solutions and leading development teams. (Polished with AI \u2728)",
+  "experience": [
+    {
+      "id": "1",
+      "title": "Senior Software Engineer",
+      "company": "Tech Corp",
+      "duration": "2020 - Present",
+      "description": "Led development of microservices architecture, resulting in 40% performance improvement."
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "degree": "Bachelor of Computer Science",
+      "school": "University of Technology",
+      "year": "2018"
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Python",
+    "AWS"
+  ]
+}

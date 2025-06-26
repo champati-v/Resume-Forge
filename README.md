@@ -1,69 +1,61 @@
-# React + TypeScript + Vite
+# 💼 ResumeForge — Your AI-Powered Resume Editor (Fullstack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ResumeForge** is a modern web-based resume editor that lets users:
+- Upload & edit resumes (mock-parsed)
+- Use AI (mocked) to enhance each section
+- Save and download resumes as JSON
+- Built with **React.js + Tailwind CSS + FastAPI**
 
-Currently, two official plugins are available:
+![ResumeForge Screenshot](./preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Upload `.pdf` or `.docx` file (simulated parsing)  
+✅ Edit resume fields: Name, Summary, Experience, Education, Skills  
+✅ Enhance any section with "AI" via `/ai-enhance` FastAPI endpoint  
+✅ Save resume to backend via `/save-resume`  
+✅ Download final resume as `.json`  
+✅ Beautiful **dark-mode** UI with SaaS-grade feel
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🖥️ Frontend
+- React + TypeScript + Tailwind CSS
+- Component libraries: Lucide, Custom UI kit
+- Toast notifications for feedback
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ⚙️ Backend
+- Python 3.x + FastAPI
+- Endpoints:
+  - `POST /ai-enhance` → Returns mocked enhanced content
+  - `POST /save-resume` → Saves resume JSON to disk
+  - `GET /get-resume` → (optional) Fetch saved resume
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Setup Instructions
+
+### 🔹 1. Clone the Project
+
+```bash
+git clone https://github.com/champati-v/Resume-Forge.git
+cd resume-forge
+
+cd frontend 
+npm install
+npm run dev
+
+
+Open another terminal
+cd backend 
+python -m venv venv
+venv\Scripts\activate  (for windows)
+or
+source venv/bin/activate (for mac/linux)
+
+pip install fastapi uvicorn
+uvicorn main:app --reload
